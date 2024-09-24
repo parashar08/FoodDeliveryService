@@ -14,4 +14,8 @@ app.use(express.urlencoded({ extended: true, limit: "6kb" }));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
+import userRouter from "./routes/user.route.js";
+
+app.use("/api/v1/user", userRouter);
+
 export default app;
