@@ -34,6 +34,9 @@ const userSchema = new Schema(
             type: String,
             enum: ["customer", "restaurant", "delivery"],
             default: "customer"
+        },
+        refreshToken: {
+            type: String
         }
     },
     {timestamps: true}
