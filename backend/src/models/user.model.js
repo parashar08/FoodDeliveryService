@@ -32,7 +32,7 @@ const userSchema = new Schema(
         },
         role: {
             type: String,
-            enum: ["customer", "restaurant", "delivery"],
+            enum: ["customer", "restaurant_owner", "delivery_partner"],
             default: "customer"
         },
         refreshToken: {
