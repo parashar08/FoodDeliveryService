@@ -20,16 +20,15 @@ const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
     };
 
     return (
-        <div className="flex justify-center items-center bg-gray-50 min-h-screen">
+        <div className="flex items-center justify-center min-h-screen bg-gray-50">
             <form
-                className="bg-white p-8 rounded-lg shadow-md w-full max-w-lg relative bottom-8"
+                className="relative w-full max-w-lg p-8 bg-white rounded-lg shadow-md bottom-8"
                 onSubmit={handleSubmit}
             >
-                <h2 className="text-2xl font-extrabold mb-6 text-center text-red-600 italic">Sign Up</h2>
+                <h2 className="mb-6 text-2xl italic font-extrabold text-center text-red-600">Sign Up</h2>
 
                 <div className="mb-4">
                     <label className="block text-gray-700" htmlFor='fullname'>Full Name</label>
@@ -40,7 +39,7 @@ const Signup = () => {
                         value={inputData.fullName}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
+                        className="block w-full p-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
                     />
                 </div>
 
@@ -53,7 +52,7 @@ const Signup = () => {
                         value={inputData.email}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
+                        className="block w-full p-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
                     />
                 </div>
 
@@ -66,7 +65,7 @@ const Signup = () => {
                         value={inputData.phoneNumber}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
+                        className="block w-full p-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
                     />
                 </div>
 
@@ -79,7 +78,7 @@ const Signup = () => {
                         value={inputData.password}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
+                        className="block w-full p-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
                     />
                 </div>
 
@@ -90,7 +89,7 @@ const Signup = () => {
                         id='role'
                         value={inputData.role}
                         onChange={handleChange}
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
+                        className="block w-full p-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-black"
                     >
                         <option value="customer">Customer</option>
                         <option value="restaurant_owner">Restaurant Owner</option>
@@ -100,11 +99,11 @@ const Signup = () => {
 
                 <button
                     type="submit"
-                    className="w-full bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-300 mt-1"
+                    className="w-full p-2 mt-1 text-white transition duration-300 bg-red-500 rounded hover:bg-red-600"
                 >
                     Sign Up
                 </button>
-                <p className='text-center mt-5'>Already Have account? <Link to="/login" className='text-blue-700'>Login</Link></p>
+                <p className='mt-5 text-center'>Already Have account? <Link to="/login" className='text-blue-700'>Login</Link></p>
             </form>
         </div>
     );
